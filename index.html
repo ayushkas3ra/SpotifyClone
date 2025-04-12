@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify Clone</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="container bg-black">
+      <div class="left-box">
+        <div class="left-home bg-grey rounded m5">
+          <div class="close">
+            <img class="invert" src="close.svg" alt="close icon" />
+          </div>
+          <div class="logo">
+            <img class="invert" src="logo.svg" alt="logo" />
+          </div>
+          <ul class="list m5">
+            <li>
+              <div class="home">
+                <img class="invert" src="home3.svg" alt="home" />
+              </div>
+              Home
+            </li>
+            <li>
+              <div class="search">
+                <img class="invert" src="search3.svg" alt="search" />
+              </div>
+              Search
+            </li>
+          </ul>
+        </div>
+        <div class="library bg-grey rounded m5">
+          Your Library
+          <div class="songsList">
+            <ul>
+              <!-- <li>
+                <img class="invert" src="music.svg" alt="">
+                <div class="songInfo">
+                  <div class="songName">Song Name</div>
+                  <div>Artist Name</div>
+                </div>
+                <div class="playNow">
+                  <span>Play Now</span>
+                  <img class="invert" src="play.svg" alt="">
+                </div>
+              </li> -->
+            </ul>
+          </div>
+          <!-- <div class="left-footer bg-grey rounded m5">
+            <div data-testid="left-sidebar-footer bg-grey rounded">
+              <div data-testid="left-sidebar-legal-links bg-grey">
+                <a href="//">Legal</a>
+                <a href="//">Safety & Privacy Center</a>
+                <a href="//">Privacy Policy</a>
+                <a href="//">Cookies</a>
+                <a href="//">About Ads</a>
+                <a href="//">Accessibility</a>
+              </div>
+              <br>
+              <div class="language invert">
+                <button
+                  class="langButton m5"
+                  data-testid="language-selection-button"
+                >
+                  <div class="langSpan" aria-hidden="true">
+                    <svg
+                      data-encore-id="icon"
+                      role="img"
+                      aria-hidden="true"
+                      viewBox="0 0 16 16"
+                      style="
+                        --encore-icon-height: var(
+                          --encore-graphic-size-decorative-smaller
+                        );
+                        --encore-icon-width: var(
+                          --encore-graphic-size-decorative-smaller
+                        );
+                      "
+                    >
+                      <path
+                        d="M8.152 16H8a8 8 0 1 1 .152 0zm-.41-14.202c-.226.273-.463.713-.677 1.323-.369 1.055-.626 2.496-.687 4.129h3.547c-.06-1.633-.318-3.074-.687-4.129-.213-.61-.45-1.05-.676-1.323-.194-.235-.326-.285-.385-.296h-.044c-.055.007-.19.052-.391.296zM4.877 7.25c.062-1.771.34-3.386.773-4.624.099-.284.208-.554.329-.806a6.507 6.507 0 0 0-4.436 5.43h4.334zm-3.334 1.5a6.507 6.507 0 0 0 4.436 5.43 7.974 7.974 0 0 1-.33-.806c-.433-1.238-.71-2.853-.772-4.624H1.543zm4.835 0c.061 1.633.318 3.074.687 4.129.214.61.451 1.05.677 1.323.202.244.336.29.391.297l.044-.001c.06-.01.19-.061.385-.296.226-.273.463-.713.676-1.323.37-1.055.626-2.496.687-4.129H6.378zm5.048 0c-.061 1.771-.339 3.386-.772 4.624-.082.235-.171.46-.268.674a6.506 6.506 0 0 0 4.071-5.298h-3.03zm3.031-1.5a6.507 6.507 0 0 0-4.071-5.298c.097.214.186.44.268.674.433 1.238.711 2.853.772 4.624h4.031z"
+                      ></path>
+                    </svg>
+                  </div>
+                  English
+                </button>
+              </div>
+            </div>
+          </div> -->
+        </div>
+        <div class="left-footer bg-grey rounded m5">
+          <div data-testid="left-sidebar-footer bg-grey rounded">
+            <div data-testid="left-sidebar-legal-links bg-grey">
+              <a href="//">Legal</a>
+              <a href="//">Safety & Privacy Center</a>
+              <a href="//">Privacy Policy</a>
+              <a href="//">Cookies</a>
+              <a href="//">About Ads</a>
+              <a href="//">Accessibility</a>
+            </div>
+            <br />
+            <div class="language invert">
+              <button
+                class="langButton m5"
+                data-testid="language-selection-button"
+              >
+                <div class="langSpan" aria-hidden="true">
+                  <svg
+                    data-encore-id="icon"
+                    role="img"
+                    aria-hidden="true"
+                    viewBox="0 0 16 16"
+                    style="
+                      --encore-icon-height: var(
+                        --encore-graphic-size-decorative-smaller
+                      );
+                      --encore-icon-width: var(
+                        --encore-graphic-size-decorative-smaller
+                      );
+                    "
+                  >
+                    <path
+                      d="M8.152 16H8a8 8 0 1 1 .152 0zm-.41-14.202c-.226.273-.463.713-.677 1.323-.369 1.055-.626 2.496-.687 4.129h3.547c-.06-1.633-.318-3.074-.687-4.129-.213-.61-.45-1.05-.676-1.323-.194-.235-.326-.285-.385-.296h-.044c-.055.007-.19.052-.391.296zM4.877 7.25c.062-1.771.34-3.386.773-4.624.099-.284.208-.554.329-.806a6.507 6.507 0 0 0-4.436 5.43h4.334zm-3.334 1.5a6.507 6.507 0 0 0 4.436 5.43 7.974 7.974 0 0 1-.33-.806c-.433-1.238-.71-2.853-.772-4.624H1.543zm4.835 0c.061 1.633.318 3.074.687 4.129.214.61.451 1.05.677 1.323.202.244.336.29.391.297l.044-.001c.06-.01.19-.061.385-.296.226-.273.463-.713.676-1.323.37-1.055.626-2.496.687-4.129H6.378zm5.048 0c-.061 1.771-.339 3.386-.772 4.624-.082.235-.171.46-.268.674a6.506 6.506 0 0 0 4.071-5.298h-3.03zm3.031-1.5a6.507 6.507 0 0 0-4.071-5.298c.097.214.186.44.268.674.433 1.238.711 2.853.772 4.624h4.031z"
+                    ></path>
+                  </svg>
+                </div>
+                English
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right-box bg-grey rounded">
+        <div class="header">
+          <div class="nav">
+            <svg
+              class="hamburger invert"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              color="#000000"
+              fill="none"
+            >
+              <path
+                d="M4 5L20 5"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M4 12L20 12"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M4 19L20 19"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <svg
+              class="invert"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              color="#000000"
+              fill="none"
+            >
+              <path
+                d="M15 6C15 6 9.00001 10.4189 9 12C8.99999 13.5812 15 18 15 18"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <svg
+              class="invert"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              color="#000000"
+              fill="none"
+            >
+              <path
+                d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <div class="buttons">
+            <button class="SignUp">Sign Up</button>
+            <button class="Login">Log in</button>
+          </div>
+        </div>
+        <div class="spotifyPlaylists">
+          <h3>Trending Songs</h3>
+          <div class="cardContainer">
+            <div class="card">
+              <div class="play">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+                  <circle class="green-circle" cx="24" cy="24" r="22" />
+                  <path
+                    class="icon-path"
+                    d="M37.7812 25.692C37.0742 28.378 33.7333 30.276 27.0514 34.0722C20.592 37.7417 17.3624 39.5768 14.7597 38.8392C13.6837 38.5342 12.7032 37.9553 11.9125 37.1574C10 34.826 10 30.962 10 24C10 17.038 10 13.174 11.9125 10.8426C12.7032 10.0447 13.6837 9.46582 14.7597 9.16077C17.3624 8.42318 20.592 10.2583 27.0514 13.9278C33.7333 16.723 37.0742 18.621 37.7812 21.308C37.973 21.9696 37.973 22.6224 37.7812 25.692Z"
+                  />
+                </svg>
+              </div>
+
+              <img
+                src="https://i.scdn.co/image/ab67616d00001e0201b171a2546ed723129f65cf"
+                alt="thumbnail"
+              />
+              <h4>Vartmaan</h4>
+              <p>UNIYAL , SOUMYA RAWAT</p>
+            </div>
+            <div class="card">
+              <img
+                src="https://i.scdn.co/image/ab67616d00001e02bd36c37fc3755a680b269873"
+                alt="thumbnail"
+              />
+              <h4>Premalo(From Court)</h4>
+              <p>Vijay Bulganin</p>
+            </div>
+            <div class="card">
+              <img
+                src="https://i.scdn.co/image/ab67616d00001e025fe9856a449aab589c06b6c8"
+                alt="thumbnail"
+              />
+              <h4>Paro</h4>
+              <p>Aditya Rikhari</p>
+            </div>
+            <div class="card">
+              <img
+                src="https://i.scdn.co/image/ab67616d00001e0286eb61be5784dcfbff4ed1ad"
+                alt="thumbnail"
+              />
+              <h4>Run it Up</h4>
+              <p>E Hanumankind</p>
+            </div>
+            <div class="card">
+              <img
+                src="https://i.scdn.co/image/ab67616d00001e024e081a1db1702e9019d40a3b"
+                alt="thumbnail"
+              />
+              <h4>2 Khatole</h4>
+              <p>Masoom Sharma</p>
+            </div>
+          </div>
+          <h3>Popular Artists</h3>
+          <div class="cardContainer2">
+            <div class="card2">
+              <img
+                src="https://i.scdn.co/image/ab67616100005174cb6926f44f620555ba444fca"
+                alt="thumbnail"
+              />
+              <h4>Pritam</h4>
+              <p>Artist</p>
+            </div>
+            <div class="card2">
+              <img
+                src="https://i.scdn.co/image/ab67616100005174b19af0ea736c6228d6eb539c"
+                alt="thumbnail"
+              />
+              <h4>A.R.Rahman</h4>
+              <p>Artist</p>
+            </div>
+            <div class="card2">
+              <img
+                src="https://i.scdn.co/image/ab67616100005174b69f6182a27407318b632a5f"
+                alt="thumbnail"
+              />
+              <h4>Sachin-Jigar</h4>
+              <p>Artist</p>
+            </div>
+            <div class="card2">
+              <img
+                src="https://i.scdn.co/image/ab67616100005174c40600e02356cc86f0debe84"
+                alt="thumbnail"
+              />
+              <h4>Atif Aslam</h4>
+              <p>Artist</p>
+            </div>
+            <div class="card2">
+              <img
+                src="https://i.scdn.co/image/ab6761610000517490b6c3d093f9b02aad628eaf"
+                alt="thumbnail"
+              />
+              <h4>Vishal-Shekhar</h4>
+              <p>Artist</p>
+            </div>
+          </div>
+          <div class="playbar">
+            <div class="seekbar">
+              <div class="circle"></div>
+            </div>
+            <div class="songTitle"></div>
+            <div class="playButtons">
+              <img
+                class="invert previous"
+                id="previous"
+                src="previous.svg"
+                alt="previousIcon"
+              />
+              <img class="invert" id="play" src="play.svg" alt="playIcon" />
+              <img
+                class="invert next"
+                id="next"
+                src="next.svg"
+                alt="nextIcon"
+              />
+            </div>
+            <div class="timeVol">
+              <div class="songTime"></div>
+              <div class="volumeDiv">
+                <img class="invert volume" src="volume.svg" alt="volume icon" />
+                <div class="range">
+                  <input class="range" type="range" name="volumeRange" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
